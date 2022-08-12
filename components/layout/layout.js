@@ -1,9 +1,13 @@
 import { Fragment } from 'react'
+import LoginModal from '../modals/login-modal';
+import Navbar from './navbar';
 
 function Layout(props) {
   return (
     <Fragment>
-      <main>{props.children}</main>
+      <Navbar/>
+      <LoginModal/>
+      {props.children}
     </Fragment>
   )
 }

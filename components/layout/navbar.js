@@ -1,99 +1,102 @@
-
+import { useDispatch } from 'react-redux'
+import { open } from '../../slices/login-modal-slice'
 
 function Navbar() {
+  const dispatch = useDispatch();
+
   return (
-    <header class="header header-transparent header-full">
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo"/>
-            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo"/>
+    <header className="header header-transparent header-full">
+      <nav className="navbar navbar-expand-lg sticky-navbar">
+        <div className="container">
+          <a className="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-light.png" className="logo-light" alt="logo"/>
+            <img src="assets/images/logo/logo-dark.png" className="logo-dark" alt="logo"/>
           </a>
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
+          <button className="navbar-toggler" type="button">
+            <span className="menu-lines"><span></span></span>
           </button>
-          <div class="header__top-right">
-            <ul class="list-unstyled d-flex justify-content-end align-items-center mb-0">
+          <div className="header__top-right">
+            <ul className="list-unstyled d-flex justify-content-end align-items-center mb-0">
               <li>
-                <div class="dropdown lang-dropdown">
-                  <button class="dropdown-toggle lang-dropdown-toggle" id="langDropdown" data-toggle="dropdown">
-                    <i class="icon-map"></i><span>English</span>
+                <div className="dropdown lang-dropdown">
+                  <button className="dropdown-toggle lang-dropdown-toggle" id="langDropdown" data-toggle="dropdown">
+                    <i className="icon-map"></i><span>English</span>
                   </button>
-                  <div class="dropdown-menu" aria-labelledby="langDropdown">
-                    <a class="dropdown-item" href="#">Spain</a>
-                    <a class="dropdown-item" href="#">France</a>
+                  <div className="dropdown-menu" aria-labelledby="langDropdown">
+                    <a className="dropdown-item" href="#">Spain</a>
+                    <a className="dropdown-item" href="#">France</a>
                   </div>
                 </div>
               </li>
               <li>
-                <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
-                  <li class="d-none d-xl-block">
-                    <a href="request-quote.html" class="btn action__btn-contact">Request A Quote</a>
+                <ul className="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+                  <li className="d-none d-xl-block">
+                    <a href="request-quote.html" className="btn action__btn-contact">Request A Quote</a>
                   </li>
                   <li>
-                    <button class="action__btn action__btn-login open-login-popup">
-                      <i class="icon-user"></i><span>Login</span>
+                    <button className="action__btn action__btn-login open-login-popup" onClick={() => dispatch(open())}>
+                      <i className="icon-user"></i><span>Login</span>
                     </button>
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav__item">
-                <a href="index.html" class="nav__item-link">Home</a>
+          <div className="collapse navbar-collapse" id="mainNavigation">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav__item">
+                <a href="index.html" className="nav__item-link">Home</a>
               </li>
-              <li class="nav__item">
-                <a href="about-us.html" class="nav__item-link">About Us</a>
+              <li className="nav__item">
+                <a href="about-us.html" className="nav__item-link">About Us</a>
               </li>
-              <li class="nav__item has-dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">IT Solutions</a>
-                <ul class="dropdown-menu wide-dropdown-menu">
-                  <li class="nav__item">
-                    <div class="row mx-0">
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <a href="it-solutions.html" class="nav__item-link dropdown-menu-title">IT Solutions</a>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">IT
+              <li className="nav__item has-dropdown">
+                <a href="#" data-toggle="dropdown" className="dropdown-toggle nav__item-link">IT Solutions</a>
+                <ul className="dropdown-menu wide-dropdown-menu">
+                  <li className="nav__item">
+                    <div className="row mx-0">
+                      <div className="col-sm-6 dropdown-menu-col">
+                        <a href="it-solutions.html" className="nav__item-link dropdown-menu-title">IT Solutions</a>
+                        <ul className="nav flex-column">
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">IT
                               Management</a>
                           </li> 
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">Cyber
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">Cyber
                               Security</a>
                           </li> 
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">Cloud
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">Cloud
                               Computing</a>
                           </li> 
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">IT
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">IT
                               Consulting</a>
                           </li> 
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">Software
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">Software
                               Dev</a>
                           </li> 
-                          <li class="nav__item"><a class="nav__item-link" href="it-solutions-single.html">IT Support</a>
+                          <li className="nav__item"><a className="nav__item-link" href="it-solutions-single.html">IT Support</a>
                           </li>
                           
                         </ul>
                       </div>
-                      <div class="col-sm-6 dropdown-menu-col">
-                        <a href="industries.html" class="nav__item-link dropdown-menu-title">Industries</a>
-                        <ul class="nav flex-column">
-                          <li class="nav__item"><a class="nav__item-link"
+                      <div className="col-sm-6 dropdown-menu-col">
+                        <a href="industries.html" className="nav__item-link dropdown-menu-title">Industries</a>
+                        <ul className="nav flex-column">
+                          <li className="nav__item"><a className="nav__item-link"
                               href="industries-single-industry.html">Education,
                               Non-Profit</a></li> 
-                          <li class="nav__item"><a class="nav__item-link"
+                          <li className="nav__item"><a className="nav__item-link"
                               href="industries-single-industry.html">Accounting,
                               Finance</a></li> 
-                          <li class="nav__item"><a class="nav__item-link"
+                          <li className="nav__item"><a className="nav__item-link"
                               href="industries-single-industry.html">Government &
                               Public</a></li> 
-                          <li class="nav__item"><a class="nav__item-link" href="industries-single-industry.html">Energy
+                          <li className="nav__item"><a className="nav__item-link" href="industries-single-industry.html">Energy
                               &
                               Utilities</a></li> 
-                          <li class="nav__item"><a class="nav__item-link" href="industries-single-industry.html">Legal,
+                          <li className="nav__item"><a className="nav__item-link" href="industries-single-industry.html">Legal,
                               Law
                               Firms</a></li> 
-                          <li class="nav__item"><a class="nav__item-link"
+                          <li className="nav__item"><a className="nav__item-link"
                               href="industries-single-industry.html">Manufacturing</a>
                           </li>
                           
@@ -103,23 +106,23 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li class="nav__item">
-                <a href="case-studies-grid.html" class="nav__item-link">Case Studies</a>
+              <li className="nav__item">
+                <a href="case-studies-grid.html" className="nav__item-link">Case Studies</a>
               </li>
-              <li class="nav__item">
-                <a href="blog.html" class="nav__item-link">Our Blog</a>
+              <li className="nav__item">
+                <a href="blog.html" className="nav__item-link">Our Blog</a>
               </li>
-              <li class="nav__item">
-                <a href="coming-soon.html" class="nav__item-link">Coming Soon</a>
+              <li className="nav__item">
+                <a href="coming-soon.html" className="nav__item-link">Coming Soon</a>
               </li>
-              <li class="nav__item">
-                <a href="contact-us.html" class="nav__item-link">Contacts</a>
+              <li className="nav__item">
+                <a href="contact-us.html" className="nav__item-link">Contacts</a>
               </li>
             </ul>
-            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+            <button className="close-mobile-menu d-block d-lg-none"><i className="fas fa-times"></i></button>
           </div>
-          <div class="d-flex align-items-center">
-            <a href="#" class="action__btn action__btn-search ml-30"><i class="icon-search"></i></a>
+          <div className="d-flex align-items-center">
+            <a href="#" className="action__btn action__btn-search ml-30"><i className="icon-search"></i></a>
           </div>
         </div>
       </nav>
