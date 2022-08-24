@@ -1,6 +1,10 @@
-import { ReactDOM } from "react"; 
+import { useSelector } from 'react-redux' 
 
 function LoginModal() {
+  const isOpen = useSelector(state => state.loginModal.isOpen);
+
+  if (!isOpen) return null;
+
   return ReactDOM.createPortal(
     <div className="login-popup">
       <div className="login-popup-wrapper">
