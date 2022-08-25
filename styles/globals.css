@@ -5635,7 +5635,7 @@ input[type=radio] {
   width: 58px;
   height: 52px;
   z-index: -1;
-  background-image: url(../images/testimonials/quote-icon.png);
+  background-image: url(/images/testimonials/quote-icon.png);
 }
 
 .testimonials-layout1 .slick-dots {
@@ -5677,7 +5677,7 @@ input[type=radio] {
   width: 58px;
   height: 52px;
   z-index: 1;
-  background-image: url(../images/testimonials/quote-icon2.png);
+  background-image: url(/images/testimonials/quote-icon2.png);
 }
 
 .testimonials-layout2 .testimonial-item .testimonial__title {

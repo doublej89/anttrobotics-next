@@ -4,7 +4,9 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap"/>
+      </Head>
       <body>
         <Main />
         <NextScript />
